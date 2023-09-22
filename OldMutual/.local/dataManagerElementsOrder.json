@@ -1,0 +1,32 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtInvoicesRemittance&Sequence_1",
+        "dtDuplicateInvRemittance&Sequence_1",
+        "PivotSheet&Sequence_10",
+        "dtInvMatchedData&Sequence_1",
+        "dtInvNotMatchedData&Sequence_1",
+        "dtFullyPaid&Sequence_1",
+        "dtPartiallyPaid&Sequence_1",
+        "dtSourceStatement&Sequence_1",
+        "strFilteredFilePath&Sequence_1",
+        "dtRemittanceData&Sequence_1",
+        "strSatementOfAccountFilePath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
