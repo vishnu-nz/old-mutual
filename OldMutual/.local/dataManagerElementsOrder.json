@@ -12,9 +12,11 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtOverAllInvMatched&Sequence_1",
+        "dtOverAllInvNotMatched&Sequence_1",
+        "dtOverAllClaims&Sequence_1",
         "dtInvoicesRemittance&Sequence_1",
         "dtDuplicateInvRemittance&Sequence_1",
-        "PivotSheet&Sequence_10",
         "dtInvMatchedData&Sequence_1",
         "dtInvNotMatchedData&Sequence_1",
         "dtFullyPaid&Sequence_1",
