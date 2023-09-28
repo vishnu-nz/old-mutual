@@ -12,6 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtBenefitsExhausted&Sequence_1",
+        "dtRejected&Sequence_1",
+        "dtInpatientClaims&Sequence_1",
         "dtOverAllInvMatched&Sequence_1",
         "dtOverAllInvNotMatched&Sequence_1",
         "dtOverAllClaims&Sequence_1",
