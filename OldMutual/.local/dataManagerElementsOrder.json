@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtSmartInvAmtNotMatched&Sequence_29",
+        "dtSmartInvAmtMatched&Sequence_29",
+        "dtExceptionInvoiceNotMatched&Sequence_1",
+        "dtExceptionInvoiceMatched&Sequence_1",
         "dtSmartData&Sequence_33",
         "dtSmartReport&Sequence_33",
         "dtSmartReport&Sequence_32",
@@ -35,6 +39,14 @@
         "dtRemittanceData&Sequence_1",
         "strSatementOfAccountFilePath&Sequence_1"
       ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
