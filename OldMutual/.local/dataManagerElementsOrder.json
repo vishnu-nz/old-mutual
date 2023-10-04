@@ -12,6 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtSmartData&Sequence_33",
+        "dtSmartReport&Sequence_33",
+        "dtSmartReport&Sequence_32",
+        "dtSmartReport&Sequence_31",
+        "dtSmartInvoiceNotMatched&Sequence_1",
+        "dtSmartInvoiceMatched&Sequence_1",
         "dtBenefitsExhausted&Sequence_1",
         "dtRejected&Sequence_1",
         "dtInpatientClaims&Sequence_1",
