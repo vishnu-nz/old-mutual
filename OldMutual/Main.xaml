@@ -933,7 +933,7 @@
                                 </scg:List>
                               </ui:FilterDataTable.SelectColumns>
                             </ui:FilterDataTable>
-                            <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtSmartInvAmtMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_16" SheetName="SmartInvAmountMatched" StartingCell="A1" />
+                            <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtSmartInvAmtMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_16" SheetName="OML To Deal_Smart Ran" StartingCell="A1" />
                             <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtSmartInvAmtNotMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_17" SheetName="SmartInvAmountNotMatched" StartingCell="A1" />
                             <ui:ExcelWriteCell Cell="AQ1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_25" SheetName="SmartInvoiceNotMatched" Text="ExceptionReportInvStatus" />
                             <ui:ExcelWriteCell Cell="[&quot;AQ2:AQ&quot;+(dtSmartInvoiceNotMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="SmartInvoiceNotMatched" Text="[&quot;=IF(ISNA(VLOOKUP(AO2,'[Exceptional reports as at 08.06.2023.xlsx]Sheet1'!$F:$F,1,FALSE)),&quot;&quot;InvoiceNotMatched&quot;&quot;,&quot;&quot;InvoiceMatched&quot;&quot;)&quot;]" />
@@ -1019,7 +1019,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtExceptionInvoiceNotMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_14" SheetName="ExceptionInvoiceNotMatched" StartingCell="A1" />
+            <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtExceptionInvoiceNotMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_14" SheetName="Untraced Bills" StartingCell="A1" />
             <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtExceptionInvoiceMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_15" SheetName="ExceptionInvoiceMatched" StartingCell="A1" />
           </Sequence>
         </ActivityAction>
