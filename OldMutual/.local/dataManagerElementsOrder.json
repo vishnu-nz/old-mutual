@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strOMETotalSum&Sequence_47",
+        "strBenefitsTotalSum&Sequence_1",
+        "dtSummary&Sequence_1",
+        "dtReversedData&Sequence_1",
         "dtSmartReport&Sequence_1",
         "dtSmartInvAmtNotMatched&Sequence_29",
         "dtSmartInvAmtMatched&Sequence_29",
@@ -44,7 +48,9 @@
     {
       "Path": "Test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dtRemittanceData&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
