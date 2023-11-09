@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727.2,17582.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,17111.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,7 +105,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="737.6,17517.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="704,17046.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Input\AGA KHAN UNIVERSITY HOSPITAL STATEMENT OF ACCOUNT AS AT 31.05.2023.xlsx" Name="strSatementOfAccountFilePath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtRemittanceData" />
@@ -131,15 +131,21 @@
       <Variable x:TypeArguments="sd:DataTable" Name="dtReversedData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSummary" />
       <Variable x:TypeArguments="x:String" Name="strBenefitsTotalSum" />
+      <Variable x:TypeArguments="x:String" Name="strRemittanceTotal" />
+      <Variable x:TypeArguments="x:Double" Name="strUntracedTotal" />
+      <Variable x:TypeArguments="x:String" Name="strOMETotalSum" />
+      <Variable x:TypeArguments="x:String" Name="strDecMissingDocTotal" />
+      <Variable x:TypeArguments="x:String" Name="strDecNonClinicalTotal" />
+      <Variable x:TypeArguments="x:String" Name="strDecMiscTotal" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dtSummary]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="675.2,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Summary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;OM_x0020_Ins&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;AKUHN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Paid KE&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements(sheet 3)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Paid SS&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;To be paid&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Processed to be paid(Integrated claims)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;OMLKE to deal&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;OMLKE to rectify/Deal(Sheet2)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Benefits&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Clients who have exceeded their Limits. Payable if on Smart(sheet 3&amp;amp;4)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Resubmitted claims&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Barcoded claims to be processed&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Untraced Bills&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Provide invoice copies if smart ran(sheet 5&amp;amp;6)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Decline-Clinical&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet8)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Decline-Non Clinical&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet9)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Decline-Missing Documentation&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Additional documents or information Required(sheet7)&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Rwanda&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;OMKE to follow up with OMRW for payment&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Uganda&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;OMKE to follow up with OMUG for payment&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Sudan&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;OMKE to follow up with OMSS for payment&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Recoveries&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Duplicate or erroneous payment made to the provider to be recovered&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Write offs&lt;/Summary&gt;&#xD;&#xA;    &lt;Description&gt;Provider to write off amounts&lt;/Description&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Summary&gt;Total&lt;/Summary&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ReadRange AddHeaders="True" DataTable="[dtRemittanceData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="675.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B6" SheetName="D365FO Periodic remittance Medi" WorkbookPath="Input\D365FO Periodic remittance Medical - 2023-06-08T100614.185-Kenya.xlsx" />
-    <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dtRemittanceData]" SelectColumnsMode="Remove">
+    <ui:BuildDataTable DataTable="[dtSummary]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="641.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Summary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OM_x0020_Ins&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;AKUHN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid KE&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements(sheet 3)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid SS&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;To be paid&lt;/Summary&gt;&#xA;    &lt;Description&gt;Processed to be paid(Integrated claims)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;OMLKE to deal&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMLKE to rectify/Deal(Sheet2)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Benefits&lt;/Summary&gt;&#xA;    &lt;Description&gt;Clients who have exceeded their Limits. Payable if on Smart(sheet 3&amp;amp;4)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Resubmitted claims&lt;/Summary&gt;&#xA;    &lt;Description&gt;Barcoded claims to be processed&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Untraced Bills&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provide invoice copies if smart ran(sheet 5&amp;amp;6)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet8)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Non Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet9)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Missing Documentation&lt;/Summary&gt;&#xA;    &lt;Description&gt;Additional documents or information Required(sheet7)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Rwanda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMRW for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Uganda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMUG for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Sudan&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMSS for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Recoveries&lt;/Summary&gt;&#xA;    &lt;Description&gt;Duplicate or erroneous payment made to the provider to be recovered&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Write offs&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provider to write off amounts&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Total&lt;/Summary&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ReadRange AddHeaders="True" DataTable="[dtRemittanceData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="641.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B6" SheetName="D365FO Periodic remittance Medi" WorkbookPath="Input\D365FO Periodic remittance Medical - 2023-06-08T100614.185-Kenya.xlsx" />
+    <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dtRemittanceData]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -155,7 +161,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table Reversed" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_21" OutputDataTable="[dtReversedData]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table Reversed" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_21" OutputDataTable="[dtReversedData]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
@@ -174,15 +180,15 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="675.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="641.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_43">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,274.4" sap2010:WorkflowViewState.IdRef="Sequence_43">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table Reversal Amount = 0" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,161" sap2010:WorkflowViewState.IdRef="FilterDataTable_22" OutputDataTable="[dtRemittanceData]" SelectColumnsMode="Remove">
+          <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table Reversal Amount = 0" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_22" OutputDataTable="[dtRemittanceData]" SelectColumnsMode="Remove">
             <ui:FilterDataTable.Filters>
               <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                 <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -210,32 +216,32 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Delay sap:VirtualizedContainerService.HintSize="675.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_3">
+    <Delay sap:VirtualizedContainerService.HintSize="641.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_3">
       <InArgument x:TypeArguments="x:TimeSpan">
         <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="00:00:05" />
       </InArgument>
     </Delay>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtRemittanceData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="675.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Remittance" WorkbookPath="[strFilteredFilePath]" />
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtReversedData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="675.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Reversed" WorkbookPath="[strFilteredFilePath]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope- Remittance" sap:VirtualizedContainerService.HintSize="675.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strFilteredFilePath]">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtRemittanceData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="641.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Remittance" WorkbookPath="[strFilteredFilePath]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtReversedData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="641.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Reversed" WorkbookPath="[strFilteredFilePath]" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope- Remittance" sap:VirtualizedContainerService.HintSize="641.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strFilteredFilePath]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,2285.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,932.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelWriteCell Cell="L1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Remittance" Text="InvNum" />
-            <ui:ExcelWriteCell Cell="[&quot;L2:L&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Remittance" Text="[&quot;=LEFT(A2, FIND(&quot;&quot;#&quot;&quot;,A2)-1)&quot;]" />
-            <ui:ExcelWriteCell Cell="M1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Remittance" Text="InvNum_Amt" />
-            <ui:ExcelWriteCell Cell="[&quot;M2:M&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Remittance" Text="[&quot;=LEFT(A2, FIND(&quot;&quot;#&quot;&quot;,A2)-1)&amp;J2&quot;]" />
-            <ui:ExcelWriteCell Cell="N1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Remittance" Text="Amt" />
-            <ui:ExcelWriteCell Cell="[&quot;N2:N&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Remittance" Text="=J2" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope- Statement" sap:VirtualizedContainerService.HintSize="483.2,1405.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[strSatementOfAccountFilePath]">
+            <ui:ExcelWriteCell Cell="L1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Remittance" Text="InvNum" />
+            <ui:ExcelWriteCell Cell="[&quot;L2:L&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Remittance" Text="[&quot;=LEFT(A2, FIND(&quot;&quot;#&quot;&quot;,A2)-1)&quot;]" />
+            <ui:ExcelWriteCell Cell="M1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Remittance" Text="InvNum_Amt" />
+            <ui:ExcelWriteCell Cell="[&quot;M2:M&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Remittance" Text="[&quot;=LEFT(A2, FIND(&quot;&quot;#&quot;&quot;,A2)-1)&amp;J2&quot;]" />
+            <ui:ExcelWriteCell Cell="N1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Remittance" Text="Amt" />
+            <ui:ExcelWriteCell Cell="[&quot;N2:N&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Remittance" Text="=J2" />
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope- Statement" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[strSatementOfAccountFilePath]">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
@@ -262,8 +268,8 @@
               </ui:ExcelApplicationScope.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelApplicationScope>
@@ -277,7 +283,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table Not Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[dtInvNotMatchedData]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table Not Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[dtInvNotMatchedData]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -296,7 +302,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dtInvMatchedData]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dtInvMatchedData]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -315,7 +321,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table PartiallyPaid" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtPartiallyPaid]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table PartiallyPaid" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[dtPartiallyPaid]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -334,7 +340,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table FullyPaid" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dtFullyPaid]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtSourceStatement]" DisplayName="Filter Data Table FullyPaid" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[dtFullyPaid]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -353,7 +359,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="675.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="Output\AccountStatementStatus.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="641.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="Output\AccountStatementStatus.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -379,34 +385,34 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="675.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="675.2,3347.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="641.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="641.6,1041.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,3220.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,955.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,3108.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="Output\AccountStatementStatus.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="483.2,843.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="Output\AccountStatementStatus.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2839.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,573.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
-                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;FullyPaid&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,619.2" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_2" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;FullyPaid&quot;)]" TableName="pivotfullypaid" ValuesMode="Columns">
+                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;FullyPaid&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_2" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;FullyPaid&quot;)]" TableName="pivotfullypaid" ValuesMode="Columns">
                       <ueab:CreatePivotTableXv2.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_19">
@@ -425,11 +431,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:CreatePivotTableXv2>
-                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;PartiallyPaid&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,619.2" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_3" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;PartiallyPaid&quot;)]" TableName="pivotpartiallypaid" ValuesMode="Columns">
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;PartiallyPaid&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_3" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;PartiallyPaid&quot;)]" TableName="pivotpartiallypaid" ValuesMode="Columns">
                       <ueab:CreatePivotTableXv2.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_20">
@@ -448,11 +454,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:CreatePivotTableXv2>
-                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;InvoiceNotMatched&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,619.2" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_4" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;InvoiceNotMatched&quot;)]" TableName="pivotinvnotmatch" ValuesMode="Columns">
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;InvoiceNotMatched&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_4" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;InvoiceNotMatched&quot;)]" TableName="pivotinvnotmatch" ValuesMode="Columns">
                       <ueab:CreatePivotTableXv2.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
@@ -471,11 +477,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:CreatePivotTableXv2>
-                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;InvoiceMatched&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,619.2" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_5" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;InvoiceMatched&quot;)]" TableName="pivotinvmatch" ValuesMode="Columns">
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;InvoiceMatched&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_5" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;InvoiceMatched&quot;)]" TableName="pivotinvmatch" ValuesMode="Columns">
                       <ueab:CreatePivotTableXv2.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_22">
@@ -494,7 +500,7 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:CreatePivotTableXv2>
@@ -512,8 +518,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="675.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="675.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" WorkbookPath="Output\AccountStatementStatus.xlsx">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="641.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="641.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" WorkbookPath="Output\AccountStatementStatus.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -575,7 +581,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:FilterDataTable DataTable="[dtOverAllClaims]" DisplayName="Filter Data Table Inv Not Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtOverAllInvNotMatched]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllClaims]" DisplayName="Filter Data Table Inv Not Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtOverAllInvNotMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -594,7 +600,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtOverAllClaims]" DisplayName="Filter Data Table Inv Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtOverAllInvMatched]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllClaims]" DisplayName="Filter Data Table Inv Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtOverAllInvMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -613,7 +619,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table InpatientClaims" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_10" OutputDataTable="[dtInpatientClaims]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table InpatientClaims" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_10" OutputDataTable="[dtInpatientClaims]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -632,7 +638,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table Rejected" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_12" OutputDataTable="[dtRejected]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table Rejected" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_12" OutputDataTable="[dtRejected]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -659,7 +665,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table Benefits Exhausted" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_13" OutputDataTable="[dtBenefitsExhausted]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table Benefits Exhausted" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_13" OutputDataTable="[dtBenefitsExhausted]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -686,7 +692,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table Partially Paid" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_14" OutputDataTable="[dtPartiallyPaid]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table Partially Paid" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_14" OutputDataTable="[dtPartiallyPaid]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="16">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
@@ -769,14 +775,14 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="675.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Smart Report" sap:VirtualizedContainerService.HintSize="675.2,2512" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="641.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Smart Report" sap:VirtualizedContainerService.HintSize="641.6,2897.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_8" InstanceCachePeriod="3000" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,2402.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,2788" sap2010:WorkflowViewState.IdRef="Sequence_31">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dtSmartReport" />
             </Sequence.Variables>
@@ -797,13 +803,18 @@
             <ui:ExcelWriteCell Cell="[&quot;T2:T&quot;+(dtSmartReport.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="545.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_22" SheetName="Sheet1" Text="[&quot;=SUBSTITUTE(J2,&quot;&quot;_&quot;&quot;,&quot;&quot;/&quot;&quot;)&quot;]" />
             <ui:ExcelWriteCell Cell="U1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="545.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_27" SheetName="Sheet1" Text="InvNumAmount" />
             <ui:ExcelWriteCell Cell="[&quot;U2:U&quot;+(dtSmartReport.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="545.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_28" SheetName="Sheet1" Text="=T2&amp;H2" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Overall Claims - Excel Application Scope" sap:VirtualizedContainerService.HintSize="545.6,1678.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_17" InstanceCachePeriod="3000" WorkbookPath="Output\OverallClaimMatchStatus.xlsx">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Overall Claims - Excel Application Scope" sap:VirtualizedContainerService.HintSize="545.6,2064" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_17" InstanceCachePeriod="3000" WorkbookPath="Output\OverallClaimMatchStatus.xlsx">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1568.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1954.4" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtDecMissingDoc" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtDecNonClinical" />
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtDecMisc" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -815,12 +826,80 @@
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtPartiallyPaid]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_20" SheetName="PartiallyPaidBenefits" StartingCell="A1" />
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtBenefitsExhausted]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_21" SheetName="BenefitsExhaustedProvider" StartingCell="A1" />
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtRejected]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_22" SheetName="FullyRejectedProvider" StartingCell="A1" />
+                    <ui:FilterDataTable DataTable="[dtRejected]" DisplayName="Filter Data Table - Decline Missing Documentation" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="449.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_23" OutputDataTable="[dtDecMissingDoc]" SelectColumnsMode="Remove">
+                      <ui:FilterDataTable.Filters>
+                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["REMARKS/ REASON"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["ATTACH SMART REPORT"]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.Filters>
+                      <ui:FilterDataTable.SelectColumns>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <x:Null />
+                        </scg:List>
+                      </ui:FilterDataTable.SelectColumns>
+                    </ui:FilterDataTable>
+                    <ui:FilterDataTable DataTable="[dtRejected]" DisplayName="Filter Data Table Declines Non Clinical" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="449.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_24" OutputDataTable="[dtDecNonClinical]" SelectColumnsMode="Remove">
+                      <ui:FilterDataTable.Filters>
+                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["REMARKS/ REASON"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["REJECTED - DOES NOT SUPPORT CLAUSE CONDITION. NO CLAIM."]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.Filters>
+                      <ui:FilterDataTable.SelectColumns>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <x:Null />
+                        </scg:List>
+                      </ui:FilterDataTable.SelectColumns>
+                    </ui:FilterDataTable>
+                    <ui:FilterDataTable DataTable="[dtRejected]" DisplayName="Filter Data Table Decline Misceleneous" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="449.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_25" OutputDataTable="[dtDecMisc]" SelectColumnsMode="Remove">
+                      <ui:FilterDataTable.Filters>
+                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTCONTAINS">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["REMARKS/ REASON"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["REJECTED - DOES NOT SUPPORT CLAUSE CONDITION. NO CLAIM."]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="NOTCONTAINS">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["REMARKS/ REASON"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["ATTACH SMART REPORT"]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.Filters>
+                      <ui:FilterDataTable.SelectColumns>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <x:Null />
+                        </scg:List>
+                      </ui:FilterDataTable.SelectColumns>
+                    </ui:FilterDataTable>
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtInpatientClaims]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_23" SheetName="InpatientClaimsUnderReview" StartingCell="A1" />
-                    <Sequence DisplayName="Sequence - OverAllInvNotMatched_Vs_SmartReport" sap:VirtualizedContainerService.HintSize="449.6,688.8" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtDecMissingDoc]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_25" SheetName="Declines-Missing Documentation." StartingCell="A1" />
+                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtDecNonClinical]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_26" SheetName="Declines-Non Clinical" StartingCell="A1" />
+                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtDecMisc]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_27" SheetName="Declines Miscellaneous" StartingCell="A1" />
+                    <Sequence DisplayName="Sequence - OverAllInvNotMatched_Vs_SmartReport" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_15" />
@@ -855,26 +934,26 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="675.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_17" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="675.2,1113.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="641.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_17" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope -- Overall Claim Status File" sap:VirtualizedContainerService.HintSize="641.6,2834.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,2748" sap2010:WorkflowViewState.IdRef="Sequence_44">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,915.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Output\OverallClaimMatchStatus.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,2636" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Output\OverallClaimMatchStatus.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,645.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,2366.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -893,10 +972,73 @@
                           </Sequence>
                         </ActivityAction>
                       </ueab:CreatePivotTableXv2.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:CreatePivotTableXv2>
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Declines-Missing Documentation.&quot;).Range(&quot;AV1&quot;)]" DisplayName="Create Pivot Table Missing Doc" sap:VirtualizedContainerService.HintSize="443.2,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_10" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Declines-Missing Documentation.&quot;)]" TableName="pivotdoc" ValuesMode="Columns">
+                      <ueab:CreatePivotTableXv2.Body>
+                        <ActivityAction>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Fees Charged" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_25" Type="Value" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:CreatePivotTableXv2.Body>
+                    </ueab:CreatePivotTableXv2>
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Declines-Non Clinical&quot;).Range(&quot;AV1&quot;)]" DisplayName="Create Pivot Table Non Clinical" sap:VirtualizedContainerService.HintSize="443.2,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_11" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Declines-Non Clinical&quot;)]" TableName="pivotnonclinic" ValuesMode="Columns">
+                      <ueab:CreatePivotTableXv2.Body>
+                        <ActivityAction>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Fees Charged" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_26" Type="Value" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:CreatePivotTableXv2.Body>
+                    </ueab:CreatePivotTableXv2>
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Declines Miscellaneous&quot;).Range(&quot;AV1&quot;)]" DisplayName="Create Pivot Table Declines Miscellaneous" sap:VirtualizedContainerService.HintSize="443.2,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_12" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Declines Miscellaneous&quot;)]" TableName="pivotmisc" ValuesMode="Columns">
+                      <ueab:CreatePivotTableXv2.Body>
+                        <ActivityAction>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Fees Charged" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_27" Type="Value" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:CreatePivotTableXv2.Body>
                     </ueab:CreatePivotTableXv2>
                     <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;BenefitsExhaustedProvider&quot;).Cell(&quot;AV2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
                       <ueab:ReadCellValueX.SaveTo>
                         <OutArgument x:TypeArguments="x:String">[strBenefitsTotalSum]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Declines-Missing Documentation.&quot;).Cell(&quot;AV2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_5">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[strDecMissingDocTotal]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Declines-Non Clinical&quot;).Cell(&quot;AV2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_6">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[strDecNonClinicalTotal]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Declines Miscellaneous&quot;).Cell(&quot;AV2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_7">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[strDecMiscTotal]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
                     </ueab:ReadCellValueX>
                   </Sequence>
@@ -913,9 +1055,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="675.2,90.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="675.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL" />
-    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table - Smart Inv Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_15" OutputDataTable="[dtSmartInvoiceMatched]" SelectColumnsMode="Remove">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="641.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="641.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL" />
+    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table - Smart Inv Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_15" OutputDataTable="[dtSmartInvoiceMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -934,7 +1076,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table - Smart Inv Not Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_16" OutputDataTable="[dtSmartInvoiceNotMatched]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtOverAllInvNotMatched]" DisplayName="Filter Data Table - Smart Inv Not Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_16" OutputDataTable="[dtSmartInvoiceNotMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -953,37 +1095,37 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="675.2,3026.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_16" InstanceCachePeriod="3000" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Smart Report Vs Exceptional Report&#xA;" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="641.6,112.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_16" InstanceCachePeriod="3000" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="641.6,2916.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope-Exceptional Report" sap:VirtualizedContainerService.HintSize="579.2,2804.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_14" InstanceCachePeriod="3000" WorkbookPath="Input\Exceptional reports as at 08.06.2023.xlsx">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope-Exceptional Report" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_14" InstanceCachePeriod="3000" WorkbookPath="Input\Exceptional reports as at 08.06.2023.xlsx">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,2695.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,2439.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Smart Inv Match Status" sap:VirtualizedContainerService.HintSize="483.2,2583.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Smart Inv Match Status" sap:VirtualizedContainerService.HintSize="483.2,2327.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_9" InstanceCachePeriod="3000" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
                       <ui:ExcelApplicationScope.Body>
                         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2473.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2217.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvAmtMatched" />
                               <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvAmtNotMatched" />
@@ -1057,8 +1199,6 @@
                                 </InArgument>
                               </ui:ExcelReadRange.Range>
                             </ui:ExcelReadRange>
-                            <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtSummary]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_24" SheetName="Summary" StartingCell="D10" />
-                            <ui:ExcelWriteCell Cell="E15" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_39" SheetName="Summary" Text="[strBenefitsTotalSum]" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ExcelApplicationScope.Body>
@@ -1074,17 +1214,24 @@
               </ui:ExcelApplicationScope.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelApplicationScope>
           </Sequence>
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="675.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="EXCEL" />
-    <ui:FilterDataTable DataTable="[dtSmartInvoiceNotMatched]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_17" OutputDataTable="[dtExceptionInvoiceMatched]" SelectColumnsMode="Remove">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="641.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="EXCEL" />
+    <ui:FilterDataTable DataTable="[dtSmartInvoiceNotMatched]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_17" OutputDataTable="[dtExceptionInvoiceMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -1103,7 +1250,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:FilterDataTable DataTable="[dtSmartInvoiceNotMatched]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_18" OutputDataTable="[dtExceptionInvoiceNotMatched]" SelectColumnsMode="Remove">
+    <ui:FilterDataTable DataTable="[dtSmartInvoiceNotMatched]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="641.6,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_18" OutputDataTable="[dtExceptionInvoiceNotMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -1122,7 +1269,7 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="675.2,437.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_15" InstanceCachePeriod="3000" WorkbookPath="Output\ExceptionReportMatchStatus.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="641.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_15" InstanceCachePeriod="3000" WorkbookPath="Output\ExceptionReportMatchStatus.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -1141,33 +1288,93 @@
       </ui:ExcelApplicationScope.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="675.2,1313.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - Get Remittance Total" sap:VirtualizedContainerService.HintSize="641.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_5">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,1227.2" sap2010:WorkflowViewState.IdRef="Sequence_48">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_50">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,1115.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,915.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_6" ResizeWindow="None" WorkbookPath="[strFilteredFilePath]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,845.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="strOMETotalSum" />
-                    </Sequence.Variables>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,645.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Remittance&quot;).Range(&quot;T1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="443.2,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_8" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Remittance&quot;)]" TableName="rmttotal" ValuesMode="Columns">
+                      <ueab:CreatePivotTableXv2.Body>
+                        <ActivityAction>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Amt" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_23" Type="Value" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:CreatePivotTableXv2.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:CreatePivotTableXv2>
+                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Remittance&quot;).Cell(&quot;T2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:String">[strRemittanceTotal]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                    </ueab:ReadCellValueX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - Total OML To Deal From Smart Report" sap:VirtualizedContainerService.HintSize="641.6,1113.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_48">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,915.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,645.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1192,7 +1399,6 @@
                         <OutArgument x:TypeArguments="x:String">[strOMETotalSum]</OutArgument>
                       </ueab:ReadCellValueX.SaveTo>
                     </ueab:ReadCellValueX>
-                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[strOMETotalSum]" />
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
@@ -1200,7 +1406,130 @@
           </Sequence>
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="675.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - To Get Untraced Bills Total" sap:VirtualizedContainerService.HintSize="641.6,1113.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_6">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="539.2,915.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_7" ResizeWindow="None" WorkbookPath="Output\ExceptionReportMatchStatus.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,645.6" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="variable1" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Untraced Bills&quot;).Range(&quot;AV1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="443.2,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_9" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Untraced Bills&quot;)]" TableName="pivotuntraced" ValuesMode="Columns">
+                      <ueab:CreatePivotTableXv2.Body>
+                        <ActivityAction>
+                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Pay Amt(Invoice Currency)" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_24" Type="Value" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:CreatePivotTableXv2.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:CreatePivotTableXv2>
+                    <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Untraced Bills&quot;).Cell(&quot;AV2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="443.2,160" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                      <ueab:ReadCellValueX.SaveTo>
+                        <OutArgument x:TypeArguments="x:Double">[strUntracedTotal]</OutArgument>
+                      </ueab:ReadCellValueX.SaveTo>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ReadCellValueX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - Summary" sap:VirtualizedContainerService.HintSize="641.6,1940" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1853.6" sap2010:WorkflowViewState.IdRef="Sequence_56">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1741.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" WorkbookPath="Output\StatementSummary.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1472" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Summary&quot;).Range(&quot;D10&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dtSummary]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E15&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[strBenefitsTotalSum]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[strOMETotalSum]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G11&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[strRemittanceTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[strUntracedTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[strDecMissingDocTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[strDecNonClinicalTotal]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="641.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
   </Sequence>
 </Activity>
