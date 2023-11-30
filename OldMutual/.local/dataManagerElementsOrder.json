@@ -4,7 +4,21 @@
       "Path": null,
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "in_dtBenefitsExhausted",
+        "out_strPaidKETotal",
+        "out_strBenefitsTotalSum",
+        "in_dtDecMissingDoc",
+        "in_dtDecNonClinical",
+        "in_dtDecMisc",
+        "out_strDecMiscTotal",
+        "out_strDecNonClinicalTotal",
+        "out_strDecMissingDocTotal",
+        "out_strRemittanceTotal",
+        "in_dtSmartInvAmtMatched",
+        "out_strOMETotalSum",
+        "out_strUntracedTotal"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },

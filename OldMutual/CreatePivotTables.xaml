@@ -17,7 +17,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,9842.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,10116</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreatePivotTables_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,26 +112,26 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreatePivotTables" sap:VirtualizedContainerService.HintSize="836.8,9770.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreatePivotTables" sap:VirtualizedContainerService.HintSize="836.8,10051.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Pivot_Sequence For Remittance" sap:VirtualizedContainerService.HintSize="774.4,9658.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Pivot_Sequence For Remittance" sap:VirtualizedContainerService.HintSize="774.4,9939.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope Pivot Tables" sap:VirtualizedContainerService.HintSize="712,9546.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope Pivot Tables" sap:VirtualizedContainerService.HintSize="712,9827.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="678.4,9460" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="678.4,9740.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -561,27 +561,27 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ueab:ExcelApplicationCard>
               <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="616,90.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File Total OML To Deal From Smart Report" sap:VirtualizedContainerService.HintSize="616,907.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File Total OML To Deal From Smart Report" sap:VirtualizedContainerService.HintSize="616,1188" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="582.4,637.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="582.4,918.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[in_dtSmartInvAmtMatched.Rows.Count&gt;0]" sap:VirtualizedContainerService.HintSize="520,525.6" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If Condition="[in_dtSmartInvAmtMatched.Rows.Count&gt;0]" sap:VirtualizedContainerService.HintSize="520,806.4" sap2010:WorkflowViewState.IdRef="If_5">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="486.4,342.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <Sequence sap:VirtualizedContainerService.HintSize="486.4,623.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;OML To Deal_Smart Ran&quot;).Range(&quot;AV1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="443.2,52.8" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_10" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;OML To Deal_Smart Ran&quot;)]" TableName="pivotoml" ValuesMode="Columns">
+                            <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;OML To Deal_Smart Ran&quot;).Range(&quot;AV1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="443.2,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_10" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;OML To Deal_Smart Ran&quot;)]" TableName="pivotoml" ValuesMode="Columns">
                               <ueab:CreatePivotTableXv2.Body>
                                 <ActivityAction>
                                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_27">
@@ -590,13 +590,13 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Pay Amt(Invoice Currency)" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_22" Type="Value" />
+                                    <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Ar Amount" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_22" Type="Value" />
                                   </Sequence>
                                 </ActivityAction>
                               </ueab:CreatePivotTableXv2.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
