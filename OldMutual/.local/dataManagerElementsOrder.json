@@ -12,11 +12,32 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dblUntracedTotal&Sequence_1",
+        "OMETotalSum&Sequence_1",
+        "RemittanceTotal&Sequence_1",
+        "DecMissingDocTotal&Sequence_1",
+        "DecNonClinicalTotal&Sequence_1",
+        "DecMiscTotal&Sequence_1",
+        "PaidKETotal&Sequence_1",
+        "BenefitsTotalSum&Sequence_1",
+        "dtRmtInvNotMatched&Sequence_1",
+        "dtOverAllClaims_Valid&Sequence_1",
+        "dtOverAllNotMatched&Sequence_1",
+        "dtSmartInvAmtMatched&Sequence_1",
+        "dtStatement&Sequence_1",
+        "dtSOA&Sequence_1",
+        "dtOACMatched&Sequence_1",
+        "dtRmtOACMatched&Sequence_1",
+        "dtRmtVsOACData&Sequence_1",
+        "dtRmtOACNotMatched&Sequence_1",
+        "dtOverAllClaimInvoiceEmpty&Sequence_1",
+        "dtOverallClaimsInvNotEmpty&Sequence_1",
+        "dtValidOverAllClaimsData&Sequence_1",
+        "dtOvrAllClmInvNotMatchedData&Sequence_1",
         "dtDecMisc&Sequence_1",
         "dtDecNonClinical&Sequence_1",
         "dtDecMissingDoc&Sequence_1",
         "strPaidKETotal&Sequence_1",
-        "variable1&Sequence_54",
         "strDecMiscTotal&Sequence_1",
         "strDecNonClinicalTotal&Sequence_1",
         "strDecMissingDocTotal&Sequence_1",
@@ -27,8 +48,6 @@
         "dtSummary&Sequence_1",
         "dtReversedData&Sequence_1",
         "dtSmartReport&Sequence_1",
-        "dtSmartInvAmtNotMatched&Sequence_29",
-        "dtSmartInvAmtMatched&Sequence_29",
         "dtExceptionInvoiceNotMatched&Sequence_1",
         "dtExceptionInvoiceMatched&Sequence_1",
         "dtSmartInvoiceNotMatched&Sequence_1",
@@ -61,6 +80,84 @@
         "dtRemittanceData&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "InvNumUpdate_Remittance_OAC_Smart.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtOverAllClaims_NotValid&Sequence_1",
+        "dtReversedData&Sequence_1",
+        "dtRemittanceData&Sequence_1",
+        "dtSmartReportSource&Sequence_6",
+        "dtOverallClaimsInv_Valid&Sequence_1",
+        "dtOverAllClaimsSource&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Filter_StatementOfAccountReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "dtSOA"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreatePivotTables.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtBenefitsExhausted",
+        "out_strPaidKETotal",
+        "out_strBenefitsTotalSum",
+        "in_dtDecMissingDoc",
+        "in_dtDecNonClinical",
+        "in_dtDecMisc",
+        "out_strDecMiscTotal",
+        "out_strDecNonClinicalTotal",
+        "out_strDecMissingDocTotal",
+        "out_strRemittanceTotal",
+        "in_dtSmartInvAmtMatched",
+        "out_strOMETotalSum",
+        "out_strUntracedTotal"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RemittanceMatchStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtRmtInvMatched&Sequence_1",
+        "dtPartiallyPaid&Sequence_4",
+        "dtFullyPaid&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtStatement",
+        "dtRmtInvNotMatched"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SmartReportMatchStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtSmartReport&Sequence_1",
+        "dtSmartInvoiceMatched&Sequence_1",
+        "dtSmartInvAmtNotMatched&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtOverAllNotMatched",
+        "out_dtSmartInvoiceNotMatched",
+        "out_dtSmartInvAmtMatched"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

@@ -4127,7 +4127,7 @@
           "lib/net5.0/ConnectionClient.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.22.0-preview": {
+      "UiPath.Excel.Activities/2.22.2": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.95.4",
@@ -4137,8 +4137,8 @@
           "NPOI": "2.5.5",
           "SharpZipLib": "1.3.3",
           "System.Text.Encoding.CodePages": "6.0.0",
-          "UiPath.Platform": "23.4.1",
-          "UiPath.Telemetry.Client": "1.5.3"
+          "UiPath.Platform": "23.10.0",
+          "UiPath.Telemetry.Client": "1.6.69"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -4554,7 +4554,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "UiPath.Platform/23.8.0-alpha.4168429": {
+      "UiPath.Platform/23.10.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -4562,10 +4562,14 @@
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/net6.0-windows7.0/_._": {}
+          "lib/net6.0-windows7.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0-windows7.0/UiPath.Platform.dll": {}
+          "lib/net6.0-windows7.0/UiPath.Platform.dll": {
+            "related": ".xml"
+          }
         },
         "resource": {
           "lib/net6.0-windows7.0/de/UiPath.Platform.resources.dll": {
@@ -4745,7 +4749,7 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.5.3": {
+      "UiPath.Telemetry.Client/1.6.69": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -9316,7 +9320,7 @@
           "lib/net5.0/ConnectionClient.dll": {}
         }
       },
-      "UiPath.Excel.Activities/2.22.0-preview": {
+      "UiPath.Excel.Activities/2.22.2": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.95.4",
@@ -9326,8 +9330,8 @@
           "NPOI": "2.5.5",
           "SharpZipLib": "1.3.3",
           "System.Text.Encoding.CodePages": "6.0.0",
-          "UiPath.Platform": "23.4.1",
-          "UiPath.Telemetry.Client": "1.5.3"
+          "UiPath.Platform": "23.10.0",
+          "UiPath.Telemetry.Client": "1.6.69"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -9743,7 +9747,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "UiPath.Platform/23.8.0-alpha.4168429": {
+      "UiPath.Platform/23.10.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -9751,10 +9755,14 @@
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
-          "lib/net6.0-windows7.0/_._": {}
+          "lib/net6.0-windows7.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0-windows7.0/UiPath.Platform.dll": {}
+          "lib/net6.0-windows7.0/UiPath.Platform.dll": {
+            "related": ".xml"
+          }
         },
         "resource": {
           "lib/net6.0-windows7.0/de/UiPath.Platform.resources.dll": {
@@ -9934,7 +9942,7 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.5.3": {
+      "UiPath.Telemetry.Client/1.6.69": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -19252,10 +19260,10 @@
         "uipath.connectionclient.nuspec"
       ]
     },
-    "UiPath.Excel.Activities/2.22.0-preview": {
-      "sha512": "mukqia0Pm/PpV1u9c+azPR+Humhd2MFjRvV0uKDVaC4/GamzLfLoQmAoDppsJ0DrapLcS1tLeSyAlsihr/OJ/w==",
+    "UiPath.Excel.Activities/2.22.2": {
+      "sha512": "zR3lLPp3XcFbkUEW5++OIniO+k1xQ5+ALSs6Ms7xURQSXdAdVrtbmnAyVSSlSz2zmoPX7j6NzM6rvdvW5IL1PA==",
       "type": "package",
-      "path": "uipath.excel.activities/2.22.0-preview",
+      "path": "uipath.excel.activities/2.22.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -19372,7 +19380,7 @@
         "lib/net6.0/zh-CN/UiPath.Excel.resources.dll",
         "lib/net6.0/zh-TW/UiPath.Excel.Activities.resources.dll",
         "lib/net6.0/zh-TW/UiPath.Excel.resources.dll",
-        "uipath.excel.activities.2.22.0-preview.nupkg.sha512",
+        "uipath.excel.activities.2.22.2.nupkg.sha512",
         "uipath.excel.activities.nuspec"
       ]
     },
@@ -19982,14 +19990,15 @@
         "uipath.ocr.contracts.nuspec"
       ]
     },
-    "UiPath.Platform/23.8.0-alpha.4168429": {
-      "sha512": "LclhV8l+5Geqy1av/gL9TLxH+lUBasbb1alUKbM7x5yFHXyKxjSY6Z66ZnKgLCHkEf4yAsxoiJRSRlPxMv1dlA==",
+    "UiPath.Platform/23.10.0": {
+      "sha512": "9tweZGj1eN51+N8e7rEz4S5FHqZ7P2HuFP9YzqGcj7sRBD8JK9z0g56QqsBeorWgeVVz/vNpiLRWZpzejsX8nA==",
       "type": "package",
-      "path": "uipath.platform/23.8.0-alpha.4168429",
+      "path": "uipath.platform/23.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.Platform.dll",
+        "lib/net461/UiPath.Platform.xml",
         "lib/net461/de/UiPath.Platform.resources.dll",
         "lib/net461/es-MX/UiPath.Platform.resources.dll",
         "lib/net461/es/UiPath.Platform.resources.dll",
@@ -20002,6 +20011,7 @@
         "lib/net461/tr/UiPath.Platform.resources.dll",
         "lib/net461/zh-CN/UiPath.Platform.resources.dll",
         "lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "lib/net6.0-windows7.0/UiPath.Platform.xml",
         "lib/net6.0-windows7.0/de/UiPath.Platform.resources.dll",
         "lib/net6.0-windows7.0/es-MX/UiPath.Platform.resources.dll",
         "lib/net6.0-windows7.0/es/UiPath.Platform.resources.dll",
@@ -20014,6 +20024,7 @@
         "lib/net6.0-windows7.0/tr/UiPath.Platform.resources.dll",
         "lib/net6.0-windows7.0/zh-CN/UiPath.Platform.resources.dll",
         "lib/net6.0/UiPath.Platform.dll",
+        "lib/net6.0/UiPath.Platform.xml",
         "lib/net6.0/de/UiPath.Platform.resources.dll",
         "lib/net6.0/es-MX/UiPath.Platform.resources.dll",
         "lib/net6.0/es/UiPath.Platform.resources.dll",
@@ -20025,7 +20036,7 @@
         "lib/net6.0/ru/UiPath.Platform.resources.dll",
         "lib/net6.0/tr/UiPath.Platform.resources.dll",
         "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
-        "uipath.platform.23.8.0-alpha.4168429.nupkg.sha512",
+        "uipath.platform.23.10.0.nupkg.sha512",
         "uipath.platform.nuspec"
       ]
     },
@@ -20114,17 +20125,17 @@
         "uipath.system.activities.runtime.windows.nuspec"
       ]
     },
-    "UiPath.Telemetry.Client/1.5.3": {
-      "sha512": "voH5VhBF+xnecfzkaaxQPKyoSfUFqvYhYp2XpLbxE6boX2fXvwpQHM1li94d+WLu20ayT+5Vb/frLpjd6nMQsA==",
+    "UiPath.Telemetry.Client/1.6.69": {
+      "sha512": "WVZS1Uo7WVXOacqE1RXcrbvYhpYOzw+6QYfyEvGpTHm3hQe658DSCMK6Pk/Fxfp6nLq26okg1kd0/ycBfhf3sw==",
       "type": "package",
-      "path": "uipath.telemetry.client/1.5.3",
+      "path": "uipath.telemetry.client/1.6.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/TelemetryClient.dll",
         "lib/netstandard2.0/TelemetryClient.dll",
-        "uipath.telemetry.client.1.5.3.nupkg.sha512",
+        "uipath.telemetry.client.1.6.69.nupkg.sha512",
         "uipath.telemetry.client.nuspec"
       ]
     },
@@ -20932,7 +20943,7 @@
   "projectFileDependencyGroups": {
     "": [],
     "net6.0-windows7.0": [
-      "UiPath.Excel.Activities >= 2.22.0-preview <= 2.22.0-preview",
+      "UiPath.Excel.Activities >= 2.22.2 <= 2.22.2",
       "UiPath.Mail.Activities >= 1.20.3 <= 1.20.3",
       "UiPath.System.Activities >= 23.8.1-preview <= 23.8.1-preview",
       "UiPath.Testing.Activities >= 23.8.0-preview <= 23.8.0-preview",
@@ -20956,7 +20967,7 @@
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.22.0-preview, 2.22.0-preview]"
+            "version": "[2.22.2, 2.22.2]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
