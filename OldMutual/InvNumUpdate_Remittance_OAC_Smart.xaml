@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,3246.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,5549.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OverAllClaims_SmartReport_InvoiceNumberUpdate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,7 +95,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="In this workflow we are updating the format for the Invoice Number column for Remittance,OverAllClaimsReport and SmartReport files&#xA;" DisplayName="InvoiceNumberUpdate" sap:VirtualizedContainerService.HintSize="704,3181.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="In this workflow we are updating the format for the Invoice Number column for Remittance,OverAllClaimsReport and SmartReport files&#xA;" DisplayName="InvoiceNumberUpdate" sap:VirtualizedContainerService.HintSize="704,5484.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaimsSource" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaims_NotValid" />
@@ -109,16 +109,16 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Updating the Valid Invoice Numbers with the correct format with Forward Slash (/)&#xA;" DisplayName="RemittanceReport_Sequence" sap:VirtualizedContainerService.HintSize="641.6,143.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap2010:Annotation.AnnotationText="Updating the Valid Invoice Numbers with the correct format with Forward Slash (/)&#xA;" DisplayName="RemittanceReport_Sequence" sap:VirtualizedContainerService.HintSize="641.6,2446.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="True" DataTable="[dtRemittanceData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="B6" SheetName="D365FO Periodic remittance Medi" WorkbookPath="Input\D365FO Periodic remittance Medical - 2023-06-08T100614.185-Kenya.xlsx" />
-      <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtRemittanceData]" SelectColumnsMode="Remove">
+      <ui:ReadRange AddHeaders="True" DataTable="[dtRemittanceData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="483.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="B6" SheetName="D365FO Periodic remittance Medi" WorkbookPath="Input\D365FO Periodic remittance Medical - 2023-06-08T100614.185-Kenya.xlsx" />
+      <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="483.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtRemittanceData]" SelectColumnsMode="Remove">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
@@ -134,7 +134,7 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table Reversed" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtReversedData]" SelectColumnsMode="Remove">
+      <ui:FilterDataTable DataTable="[dtRemittanceData]" DisplayName="Filter Data Table Reversed" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="483.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_9" OutputDataTable="[dtReversedData]" SelectColumnsMode="Remove">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
@@ -153,13 +153,13 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="Input\FilteredRemittance.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,1757.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="Input\FilteredRemittance.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1096" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1608" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,12 +173,16 @@
               <ui:ExcelWriteCell Cell="[&quot;M2:M&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Remittance" Text="[&quot;=LEFT(A2, FIND(&quot;&quot;#&quot;&quot;,A2)-1)&amp;J2&quot;]" />
               <ui:ExcelWriteCell Cell="N1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Remittance" Text="Amt" />
               <ui:ExcelWriteCell Cell="[&quot;N2:N&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="Remittance" Text="=J2" />
+              <ui:ExcelWriteCell Cell="O1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="Remittance" Text="PayRef" />
+              <ui:ExcelWriteCell Cell="[&quot;O2:O&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Remittance" Text="=C2" />
+              <ui:ExcelWriteCell Cell="P1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="Remittance" Text="InvVsSOA" />
+              <ui:ExcelWriteCell Cell="[&quot;P2:P&quot;+(dtRemittanceData.RowCount+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="Remittance" Text="[&quot;=IF(ISNA(VLOOKUP(L2,[FilteredStatementOfAccount.xlsx]Statement!$B:$B,1,FALSE)),&quot;&quot;InvoiceNotMatched&quot;&quot;,&quot;&quot;InvoiceMatched&quot;&quot;)&quot;]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>

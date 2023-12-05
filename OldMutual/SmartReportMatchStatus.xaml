@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>850.4,3847.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,3767.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SmartReportMatchStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -97,7 +97,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SmartReportMatchStatus" sap:VirtualizedContainerService.HintSize="664.8,3782.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SmartReportMatchStatus" sap:VirtualizedContainerService.HintSize="664.8,3702.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartReport" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvoiceMatched" />
@@ -108,13 +108,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="602.4,3670.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="602.4,3590.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568.8,3520.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568.8,3480.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,8 +132,8 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelWriteCell Cell="P1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="OverAll_InvNotMatched" Text="SmartReportlInvStatus" />
-                    <ui:ExcelWriteCell Cell="[&quot;P2:P&quot;+(in_dtOverAllNotMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="OverAll_InvNotMatched" Text="[&quot;=IF(ISNA(VLOOKUP(B2,'[UAP smart report Nov - June 6th 2023.xlsx]Sheet1'!$T:$T,1,FALSE)),&quot;&quot;InvoiceNotMatched&quot;&quot;,&quot;&quot;InvoiceMatched&quot;&quot;)&quot;]" />
+                    <ui:ExcelWriteCell Cell="Q1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="OverAll_InvNotMatched" Text="SmartReportlInvStatus" />
+                    <ui:ExcelWriteCell Cell="[&quot;Q2:Q&quot;+(in_dtOverAllNotMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="OverAll_InvNotMatched" Text="[&quot;=IF(ISNA(VLOOKUP(B2,'[UAP smart report Nov - June 6th 2023.xlsx]Sheet1'!$T:$T,1,FALSE)),&quot;&quot;InvoiceNotMatched&quot;&quot;,&quot;&quot;InvoiceMatched&quot;&quot;)&quot;]" />
                     <ui:ExcelReadRange AddHeaders="True" DataTable="[dtSmartReport]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="OverAll_InvNotMatched">
                       <ui:ExcelReadRange.Range>
                         <InArgument x:TypeArguments="x:String">
@@ -190,7 +190,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelApplicationScope>
             <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="506.4,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="506.4,2296" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="506.4,2256" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="Output\SmartReportMatchStatus.xlsx">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
@@ -204,7 +204,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[out_dtSmartInvoiceNotMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="410.4,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" SheetName="SmartInvoiceNotMatched" StartingCell="A1" />
                     <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtSmartInvoiceMatched]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="410.4,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_4" SheetName="SmartInvoiceMatched" StartingCell="A1" />
-                    <ui:ExcelWriteCell Cell="Q1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="410.4,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="SmartInvoiceMatched" Text="InvNumAmount" />
+                    <ui:ExcelWriteCell Cell="R1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="410.4,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="SmartInvoiceMatched" Text="InvNumAmount" />
                     <If Condition="[dtSmartInvoiceMatched.Rows.Count&gt;0]" sap:VirtualizedContainerService.HintSize="410.4,360.8" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="376.8,177.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -213,14 +213,14 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ExcelWriteCell Cell="[&quot;Q2:Q&quot;+(dtSmartInvoiceMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="SmartInvoiceMatched" Text="=B2&amp;L2" />
+                          <ui:ExcelWriteCell Cell="[&quot;R2:R&quot;+(dtSmartInvoiceMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="SmartInvoiceMatched" Text="=B2&amp;L2" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
                         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7" />
                       </If.Else>
                     </If>
-                    <ui:ExcelWriteCell Cell="R1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="410.4,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="SmartInvoiceMatched" Text="SmartInvNumAmountStatus" />
+                    <ui:ExcelWriteCell Cell="S1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="410.4,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="SmartInvoiceMatched" Text="SmartInvNumAmountStatus" />
                     <If Condition="[dtSmartInvoiceMatched.Rows.Count&gt;0]" sap:VirtualizedContainerService.HintSize="410.4,360.8" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="376.8,177.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
@@ -229,7 +229,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ExcelWriteCell Cell="[&quot;R2:R&quot;+(dtSmartInvoiceMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="SmartInvoiceMatched" Text="[&quot;=IF(ISNA(VLOOKUP(Q2,'[UAP smart report Nov - June 6th 2023.xlsx]Sheet1'!$U:$U,1,FALSE)),&quot;&quot;InvAmtNotMatched&quot;&quot;,&quot;&quot;InvAmtMatched&quot;&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;S2:S&quot;+(dtSmartInvoiceMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="SmartInvoiceMatched" Text="[&quot;=IF(ISNA(VLOOKUP(Q2,'[UAP smart report Nov - June 6th 2023.xlsx]Sheet1'!$U:$U,1,FALSE)),&quot;&quot;InvAmtNotMatched&quot;&quot;,&quot;&quot;InvAmtMatched&quot;&quot;)&quot;]" />
                         </Sequence>
                       </If.Then>
                       <If.Else>

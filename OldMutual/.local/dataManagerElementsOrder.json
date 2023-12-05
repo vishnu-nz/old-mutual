@@ -5,6 +5,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "out_strReqStatusTotal",
         "in_dtBenefitsExhausted",
         "out_strPaidKETotal",
         "out_strBenefitsTotalSum",
@@ -26,6 +27,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strReqStatusTotal&Sequence_1",
         "dblUntracedTotal&Sequence_1",
         "OMETotalSum&Sequence_1",
         "RemittanceTotal&Sequence_1",
@@ -105,10 +107,11 @@
         "dtReversedData&Sequence_1",
         "dtRemittanceData&Sequence_1",
         "dtSmartReportSource&Sequence_6",
-        "dtOverallClaimsInv_Valid&Sequence_1",
         "dtOverAllClaimsSource&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "dtOverallClaims_Valid"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -127,6 +130,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "out_strReqStatusTotal",
         "in_dtBenefitsExhausted",
         "out_strPaidKETotal",
         "out_strBenefitsTotalSum",
@@ -153,6 +157,7 @@
         "dtFullyPaid&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_dtOverAllClaimsValid",
         "in_dtStatement",
         "dtRmtInvNotMatched"
       ],
@@ -171,6 +176,45 @@
         "in_dtOverAllNotMatched",
         "out_dtSmartInvoiceNotMatched",
         "out_dtSmartInvAmtMatched"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "OverAllClaimsMatchStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtValidStatusData&Sequence_5",
+        "dtOverAllMatched&Sequence_1",
+        "dtOverAllClaims&Sequence_1",
+        "dtValidOverAllClaims&Sequence_1",
+        "dtOACMatched&Sequence_1",
+        "dtInpatientClaims&Sequence_1",
+        "dtRejected&Sequence_1",
+        "dtPartiallyPaid&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtRmtInvNotMatched",
+        "in_dtOverAllClaims_Valid",
+        "out_dtOverAllNotMatched",
+        "out_dtDecMisc",
+        "out_dtDecNonClinical",
+        "out_dtDecMissingDoc",
+        "out_dtBenefitsExhausted"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ExceptionReportMatchStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtException&Sequence_1",
+        "dtExceptionInvoiceMatched&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtSmartInvoiceNotMatched",
+        "out_dtExceptionInvoiceNotMatched"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
