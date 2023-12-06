@@ -229,7 +229,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ExcelWriteCell Cell="[&quot;S2:S&quot;+(dtSmartInvoiceMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="SmartInvoiceMatched" Text="[&quot;=IF(ISNA(VLOOKUP(Q2,'[UAP smart report Nov - June 6th 2023.xlsx]Sheet1'!$U:$U,1,FALSE)),&quot;&quot;InvAmtNotMatched&quot;&quot;,&quot;&quot;InvAmtMatched&quot;&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;S2:S&quot;+(dtSmartInvoiceMatched.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="SmartInvoiceMatched" Text="[&quot;=IF(ISNA(VLOOKUP(R2,'[UAP smart report Nov - June 6th 2023.xlsx]Sheet1'!$U:$U,1,FALSE)),&quot;&quot;InvAmtNotMatched&quot;&quot;,&quot;&quot;InvAmtMatched&quot;&quot;)&quot;]" />
                         </Sequence>
                       </If.Then>
                       <If.Else>

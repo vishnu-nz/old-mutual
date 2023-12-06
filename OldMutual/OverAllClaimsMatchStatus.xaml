@@ -469,7 +469,7 @@
                         </scg:List>
                       </ui:FilterDataTable.SelectColumns>
                     </ui:FilterDataTable>
-                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtValidStatusData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_10" SheetName="RequiredStatus" StartingCell="A1" />
+                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[dtValidStatusData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_10" SheetName="OMLKE to deal" StartingCell="A1" />
                   </Sequence>
                 </ActivityAction>
               </ui:ExcelApplicationScope.Body>

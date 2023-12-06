@@ -27,6 +27,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dblReqStatusTotal&Sequence_1",
         "strReqStatusTotal&Sequence_1",
         "dblUntracedTotal&Sequence_1",
         "OMETotalSum&Sequence_1",
