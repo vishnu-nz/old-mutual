@@ -185,7 +185,7 @@
       "Path": "OverAllClaimsMatchStatus.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dtValidStatusData&Sequence_5",
+        "dtValidStatusData&Sequence_1",
         "dtOverAllMatched&Sequence_1",
         "dtOverAllClaims&Sequence_1",
         "dtValidOverAllClaims&Sequence_1",

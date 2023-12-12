@@ -698,7 +698,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;OMLKE to deal&quot;).Range(&quot;V1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_14" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;OMLKE to deal&quot;)]" TableName="pivotsts" ValuesMode="Columns">
+                      <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;OMLKE to deal&quot;).Range(&quot;AT1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,333.6" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_14" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;OMLKE to deal&quot;)]" TableName="pivotsts" ValuesMode="Columns">
                         <ueab:CreatePivotTableXv2.Body>
                           <ActivityAction>
                             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_42">
@@ -707,12 +707,12 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Pay Amt(Invoice Currency)" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_25" Type="Value" />
+                              <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Ar Amount" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,85.6" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_25" Type="Value" />
                             </Sequence>
                           </ActivityAction>
                         </ueab:CreatePivotTableXv2.Body>
                       </ueab:CreatePivotTableXv2>
-                      <ui:ExcelReadCell Cell="V2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="OMLKE to deal">
+                      <ui:ExcelReadCell Cell="AT2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="OMLKE to deal">
                         <ui:ExcelReadCell.Result>
                           <OutArgument x:TypeArguments="x:Double">[out_strReqStatusTotal]</OutArgument>
                         </ui:ExcelReadCell.Result>
